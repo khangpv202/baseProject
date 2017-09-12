@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by binhtv on 8/23/2017.
+ * Created by khangpv on 8/23/2017.
  */
 
 public class MoolaCustomerDTO

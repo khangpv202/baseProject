@@ -9,7 +9,7 @@ import prism.gem.com.newbasestructure.authen.SignUpViewModel;
 import javax.inject.Singleton;
 
 /**
- * Created by binhtv on 8/15/2017.
+ * Created by khangpv on 8/15/2017.
  */
 
 @Singleton
@@ -32,5 +32,5 @@ public interface AppComponent
 
     void inject(SignInViewModel signInViewModel);
 
-    void inject(MoolaApplication moolaApplication);
+    void inject(BaseApplication moolaApplication);
 }

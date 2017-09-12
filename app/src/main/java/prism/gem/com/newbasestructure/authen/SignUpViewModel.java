@@ -3,7 +3,7 @@ package prism.gem.com.newbasestructure.authen;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-import prism.gem.com.newbasestructure.MoolaApplication;
+import prism.gem.com.newbasestructure.BaseApplication;
 import prism.gem.com.newbasestructure.common.UserHolder;
 import prism.gem.com.newbasestructure.dto.LoginInfoDTO;
 import prism.gem.com.newbasestructure.dto.MoolaCustomerDTO;
@@ -27,7 +27,7 @@ public class SignUpViewModel extends AndroidViewModel
     public SignUpViewModel(Application application)
     {
         super(application);
-        ((MoolaApplication) application).getAppComponent().inject(this);
+        ((BaseApplication) application).getAppComponent().inject(this);
     }
 
     public LiveData<ResponseDTO<MoolaCustomerDTO>> doLogin(LoginInfoDTO loginInfoDTO)

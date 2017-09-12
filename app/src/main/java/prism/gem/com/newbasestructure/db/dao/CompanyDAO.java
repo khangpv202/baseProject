@@ -10,7 +10,7 @@ import prism.gem.com.newbasestructure.db.entity.Company;
 import java.util.List;
 
 /**
- * Created by binhtv on 8/29/2017.
+ * Created by khangpv on 8/29/2017.
  */
 @Dao
 public interface CompanyDAO

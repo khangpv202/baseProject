@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
- * Created by binhtv on 8/29/2017.
+ * Created by khangpv on 8/29/2017.
  */
 @Entity(tableName = "company")
 public class Company

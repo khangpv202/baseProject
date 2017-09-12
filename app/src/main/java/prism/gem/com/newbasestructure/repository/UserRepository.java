@@ -12,7 +12,7 @@ import okhttp3.MediaType;
 import prism.gem.com.newbasestructure.common.DTOUtils;
 import prism.gem.com.newbasestructure.common.HandlerException;
 import prism.gem.com.newbasestructure.common.UserHolder;
-import prism.gem.com.newbasestructure.db.MoolaDb;
+import prism.gem.com.newbasestructure.db.MyDatabase;
 import prism.gem.com.newbasestructure.dto.LoginInfoDTO;
 import prism.gem.com.newbasestructure.dto.MoolaCustomerDTO;
 import prism.gem.com.newbasestructure.dto.ResponseDTO;
@@ -21,33 +21,33 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * Created by binhtv on 8/15/2017.
+ * Created by khangpv on 8/15/2017.
  */
 
 @Singleton
 public class UserRepository
 {
     private final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
-    MoolaApi moolaApi;
+    AppAPI appAPI;
     Gson gson;
     UserHolder userHolder;
-    MoolaDb moolaDb;
+    MyDatabase myDatabase;
     Application application;
 
     @Inject
-    public UserRepository(Application application, MoolaApi moolaApi, Gson gson, UserHolder userHolder, MoolaDb moolaDb/*, MoolaUserDAO moolaUserDAO*/)
+    public UserRepository(Application application, AppAPI appAPI, Gson gson, UserHolder userHolder, MyDatabase myDatabase/*, MoolaUserDAO moolaUserDAO*/)
     {
         this.application = application;
-        this.moolaApi = moolaApi;
+        this.appAPI = appAPI;
         this.gson = gson;
         this.userHolder = userHolder;
-        this.moolaDb = moolaDb;
+        this.myDatabase = myDatabase;
     }
 
     public LiveData<ResponseDTO<MoolaCustomerDTO>> doLogin(LoginInfoDTO loginInfoDTO)
     {
         final MutableLiveData<ResponseDTO<MoolaCustomerDTO>> data = new MutableLiveData<>();
-        moolaApi.login(loginInfoDTO).subscribeOn(Schedulers.io())
+        appAPI.login(loginInfoDTO).subscribeOn(Schedulers.io())
                 .subscribeOn(new ComputationScheduler())
                 .subscribe(new SingleObserver<ResponseDTO<MoolaCustomerDTO>>()
                 {
@@ -63,7 +63,7 @@ public class UserRepository
                         if (DTOUtils.isSuccess(responseDTO))
                         {
                             MoolaCustomerDTO moolaCustomerDTO = responseDTO.getResult();
-//                        moolaCustomerDTO.createEntity(moolaDb);
+//                        moolaCustomerDTO.createEntity(myDatabase);
                         }
                         data.postValue(responseDTO);
                     }

@@ -12,10 +12,10 @@ import javax.inject.Inject;
 import java.util.Locale;
 
 /**
- * Created by binhtv on 8/15/2017.
+ * Created by khangpv on 8/15/2017.
  */
 
-public class MoolaApplication extends Application
+public class BaseApplication extends Application
 {
     private AppComponent appComponent;
     @Inject UserHolder userHolder;

@@ -10,9 +10,9 @@ import dagger.Provides;
 import okhttp3.OkHttpClient;
 import prism.gem.com.newbasestructure.common.SharedPrefsHelper;
 import prism.gem.com.newbasestructure.common.UserHolder;
-import prism.gem.com.newbasestructure.db.MoolaDb;
+import prism.gem.com.newbasestructure.db.MyDatabase;
 import prism.gem.com.newbasestructure.repository.LogJsonInterceptor;
-import prism.gem.com.newbasestructure.repository.MoolaApi;
+import prism.gem.com.newbasestructure.repository.AppAPI;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -38,17 +38,17 @@ public class AppModule
 
     @Singleton
     @Provides
-    MoolaApi provideMoolaApi(UserHolder userHolder)
+    AppAPI provideMoolaApi(UserHolder userHolder)
     {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(new LogJsonInterceptor(userHolder));
         return new Retrofit.Builder()
-                .baseUrl(MoolaApi.HTTPS_MOOLA_BASE_API)
+                .baseUrl(AppAPI.HTTPS_BASE_API)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build()
-                .create(MoolaApi.class);
+                .create(AppAPI.class);
     }
 
     @Singleton
@@ -66,10 +66,10 @@ public class AppModule
 
     @Provides
     @Singleton
-    MoolaDb getMoolaDb()
+    MyDatabase getMoolaDb()
     {
-        MoolaDb db = Room
-                .databaseBuilder(mApplication, MoolaDb.class, "moola_db")
+        MyDatabase db = Room
+                .databaseBuilder(mApplication, MyDatabase.class, "moola_db")
                 .build();
         return db;
     }

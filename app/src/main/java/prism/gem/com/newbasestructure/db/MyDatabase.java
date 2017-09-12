@@ -7,10 +7,10 @@ import prism.gem.com.newbasestructure.db.dao.CompanyDAO;
 import prism.gem.com.newbasestructure.db.entity.Company;
 
 /**
- * Created by binhtv on 8/16/2017.
+ * Created by khangpv on 8/16/2017.
  */
 @Database(entities = { Company.class}, version = 1)
-public abstract class MoolaDb extends RoomDatabase
+public abstract class MyDatabase extends RoomDatabase
 {
     public abstract CompanyDAO getCompanyDAO();
 
