@@ -1,0 +1,69 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta2'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+
+    versionAPPCode = 1
+    versionAPPName = '1.0.0'
+
+    buildToolsVersion = '25.0.3'
+    minSdkVersion = 19
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+
+    junitVersion = '4.12'
+    mockitoVersion = '2.8.9'
+    espressoVersion = '2.2.2'
+    runnerVersion = "0.5"
+    rulesVersion = "0.5"
+
+    supportLibVersion = '25.3.1'
+    constraintLayoutVersion = '1.0.2'
+    architectureComponentsVersion = '1.0.0-alpha2'
+
+    retrofitVersion = '2.3.0'
+
+    daggerVersion = '2.11'
+
+    butterknifeVersion = '8.5.1'
+
+    commonlangVersion = '3.5'
+
+    rxAndroidVersion = '2.0.1'
+
+    rxJavaVersion = '2.1.3'
+
+    timberVersion = '4.5.1'
+
+    saripaarVersion = '2.0.3'
+
+    glideVersion = '4.0.0'
+
+    circleIndicatorVersion = '1.2.2@aar'
+
+    multidexVersion = '1.0.1'
+}

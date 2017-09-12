@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/back_ground_bottom_bar">
+
+    <ImageView
+            android:id="@+id/bottom_bar_customer_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"/>
+
+    <TextView
+            android:id="@+id/synTimeTxt"
+            style="@style/H13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/bottom_bar_customer_sync"/>
+
+    <ImageView
+            android:id="@+id/bottom_bar_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_launcher"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/bottom_bar_signout"
+            android:layout_centerVertical="true">
+
+        <ImageButton
+                android:id="@+id/bt_switch_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_launcher"
+                android:layout_centerInParent="true"
+                android:visibility="visible"/>
+
+        <ImageButton
+                android:id="@+id/bt_switch_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/ic_launcher"
+                android:visibility="visible"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

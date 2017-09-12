@@ -1,0 +1,48 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="H13">  <!-- Regular, 41px, Black #000000, 0 0 0 -->
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/S5</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+    <style name="H14">   <!-- Bold, 41px, White #ffffff, 255 255 255 -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/S5</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="T2"> <!--54px Regular, #ffffff-->
+        <item name="android:textSize">@dimen/S2</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="T10_while"><!-- 44px Regular, #666666-->
+        <item name="android:textSize">@dimen/S10</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="T10_background_while"><!-- 44px Regular, #666666-->
+        <item name="android:textSize">@dimen/S10</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@color/bg_blue_login</item>
+    </style>
+
+    <style name="T8"><!-- 47px Regular, #bababa-->
+        <item name="android:textSize">@dimen/S4</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="T14"><!-- 54px Medium, #ffffff-->
+        <item name="android:textSize">@dimen/S2</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+</resources>

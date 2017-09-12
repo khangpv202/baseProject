@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NewBaseStructure</string>
+    <string name="common.invalidEmail">Please enter a valid email address.</string>
+    <string name="common.emailRequire">Email is require</string>
+    <string name="common.passwordRequire">Password is require</string>
+    <string name="common.requireField">Please input all required fields (*).</string>
+    <string name="message.pleaseInputMissingField">Input missing field, please!</string>
+    <string name="message.unknownException">Unknown exception error.</string>
+    <string name="authen.guideSignIn">You have an account already?</string>
+    <string name="authen.loginWithFB">Login with FB</string>
+    <string name="authen.signMeIn">Sign me in</string>
+    <string name="common.email">Email</string>
+    <string name="common.password">Password</string>
+
+    <string name="common.signUp">Sign Up</string>
+    <string name="common.signIn">Sign In</string>
+    <string name="authen.youHaveAccountAlready">You have an account already?</string>
+</resources>
